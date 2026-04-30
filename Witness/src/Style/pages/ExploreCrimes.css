@@ -1,0 +1,117 @@
+/* CrimeDetails cards area */
+h1 {
+  margin-top: 50px;
+}
+
+.cards-grid {
+  width: min(1150px, 100%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 26px;
+
+  direction: rtl;
+}
+
+/* Card */
+.crime-card {
+  background: linear-gradient(180deg, #1b1f26, #14171c);
+  border-radius: 10px;
+  padding: 22px;
+  text-align: right;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Title */
+.crime-info h4 {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* meta row (location + date) */
+.crime-meta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 6px 0 0;
+}
+
+.crime-meta p {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.crime-meta i {
+  color: #5865f2;
+  font-size: 13px;
+}
+
+/* description line with icon */
+.crime-info .description {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.crime-info .description i {
+  color: #5865f2;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+/* button like screenshot (bottom-left) */
+.crime-card .button {
+  margin-top: 18px;
+  align-self: flex-start;
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.crime-card button:hover {
+  border-color: #5865f2;
+  color: #5865f2;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cards-grid {
+    width: min(900px, 100%);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 14px;
+  }
+}

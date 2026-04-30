@@ -1,0 +1,187 @@
+/* Make the navbar fixed at the very top */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
+.footer {
+  margin-top: 0;
+}
+
+.topbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  z-index: 9999;
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* IMPORTANT: add space so content doesn't hide under the fixed navbar */
+body{
+  padding-top: 58px; /* adjust if you change navbar height */
+}
+
+/* Navbar layout */
+.nav{
+  height: 58px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  direction: rtl; /* Arabic layout */
+}
+
+/* Right side links */
+.nav__links{
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* All links */
+.nav a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.9;
+
+  transition: 0.2s ease;
+}
+
+.nav a:hover{
+  opacity: 1;
+  color: #5865f2;
+}
+
+/* Make the last link (login) look like a button on the LEFT */
+.nav > a{
+  background: #5865f2;
+  color: #fff;
+
+  padding: 8px 14px;
+  border-radius: 4px;
+
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.nav > a:hover{
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  color: #fff; /* keep white on hover */
+}
+
+.nav > a:active{
+  transform: translateY(0);
+}
+
+/* Small screens */
+@media (max-width: 600px){
+  .nav{
+    padding: 0 12px;
+  }
+
+  .nav__links{
+    gap: 14px;
+  }
+
+  .nav a{
+    font-size: 13px;
+  }
+
+  .nav > a{
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+}
+/* ===== FOOTER ===== */
+.footer{
+  width: 100%;
+  background: #000;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  margin-top: 80px;
+}
+
+.footer__container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 18px 18px;
+}
+
+/* Grid layout */
+.footer__grid{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  text-align: right;
+}
+
+/* Column titles */
+.footer__col h4{
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* Links */
+.footer__col a{
+  display: block;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 13px;
+  margin: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.footer__col a:hover{
+  color: #6aa6ff;
+}
+
+/* Brand text (right column) */
+.footer__brand p{
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 13px;
+  line-height: 1.8;
+  max-width: 360px;
+}
+
+/* Divider line */
+.footer__line{
+  height: 1px;
+  background: rgba(255,255,255,0.12);
+  margin: 26px 0 14px;
+}
+
+/* Copyright */
+.footer__copy{
+  margin: 0;
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  font-size: 12.5px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px){
+  .footer__grid{
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer__brand p{
+    max-width: none;
+  }
+}

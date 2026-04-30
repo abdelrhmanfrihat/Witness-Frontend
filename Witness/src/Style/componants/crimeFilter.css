@@ -1,0 +1,68 @@
+/* ================================
+   Filter Wrapper
+================================ */
+.crimes-filter {
+  max-width: 1150px;
+  margin: 20px auto 30px;
+  padding: 22px;
+
+  background: linear-gradient(180deg, #1b1f26, #14171c);
+  border-radius: 10px;
+
+  direction: rtl;
+
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+/* ================================
+   Select + Date Inputs
+================================ */
+.crimes-filter select,
+.crimes-filter input[type="date"] {
+  background-color: #000;
+  color: #fff;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+
+  padding: 12px 14px;
+  font-size: 13px;
+
+  outline: none;
+  transition: 0.2s ease;
+
+  min-width: 220px;
+}
+
+/* Focus */
+.crimes-filter select:focus,
+.crimes-filter input[type="date"]:focus {
+  border-color: #5865f2;
+}
+
+/* ================================
+   Tablet
+================================ */
+@media (max-width: 1024px) {
+  .crimes-filter {
+    flex-wrap: wrap;
+  }
+}
+
+/* ================================
+   Mobile
+================================ */
+@media (max-width: 640px) {
+  .crimes-filter {
+    flex-direction: column;
+    gap: 16px;
+    padding: 18px 14px;
+  }
+
+  .crimes-filter select,
+  .crimes-filter input[type="date"] {
+    width: 100%;
+  }
+}

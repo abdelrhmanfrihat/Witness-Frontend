@@ -1,0 +1,25 @@
+/* UserFilter (Desktop) */
+.manage-users .header input {
+  width: 260px;
+  height: 40px;
+
+  background-color: #14161b;
+  border: 1px solid #2a2d34;
+  border-radius: 8px;
+
+  padding: 0 14px;
+  color: #e5e7eb;
+  font-size: 14px;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.manage-users .header input::placeholder {
+  color: #9ca3af;
+}
+
+.manage-users .header input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}

@@ -1,0 +1,72 @@
+/* =========================
+   TICKER ITEM
+========================= */
+
+.ticker-item {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 18px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.6;
+
+  opacity: 0;
+  visibility: hidden;
+
+  animation: ticker-step 36s infinite;
+}
+
+/* =========================
+   STAGGER
+========================= */
+
+.ticker-item:nth-child(1) { animation-delay: 0s; }
+.ticker-item:nth-child(2) { animation-delay: 6s; }
+.ticker-item:nth-child(3) { animation-delay: 12s; }
+.ticker-item:nth-child(4) { animation-delay: 18s; }
+.ticker-item:nth-child(5) { animation-delay: 24s; }
+.ticker-item:nth-child(6) { animation-delay: 30s; }
+
+/* =========================
+   ANIMATION (NO OVERLAP)
+========================= */
+
+@keyframes ticker-step {
+  /* hidden */
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0);
+  }
+
+  /* appear instantly */
+  4% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* stay readable */
+  20% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* disappear instantly */
+  24% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  /* stay gone */
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

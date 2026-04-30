@@ -1,0 +1,387 @@
+/* ===== PAGE BASE ===== */
+.home{
+  background: #000;
+  color: #fff;
+  direction: rtl;
+}
+
+/* ===== INTRO / HERO ===== */
+.intro{
+  padding-top: 50px;
+  padding-bottom: 70px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, #1b2340 0%, #0b0f1a 40%, #000 75%);
+}
+
+.intro h1{
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.intro p{
+  max-width: 760px;
+  margin: 0 auto 34px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+}
+
+.intro_button{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Buttons */
+.btn{
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn.primary{
+  background: #bb0a1e ;
+  color: #fff;
+  border: none;
+}
+
+.btn.primary:hover{
+  filter: brightness(1.1);
+}
+
+.btn.outline{
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn.outline:hover{
+  border-color: #5865f2;
+  color: #5865f2;
+}
+/* ===== STATS (compact like the screenshot) ===== */
+.stats{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 18px 40px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.stats-card{
+  background: linear-gradient(180deg, #1b1f26, #14171c);
+  border-radius: 10px;
+  padding: 26px 18px;
+  text-align: center;
+}
+
+.stats-card h3{
+  margin: 0 0 8px;
+  font-size: 24px;
+  color: #5865f2;
+  font-weight: 900;
+}
+
+.stats-card p{
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ===== Stats Icons ===== */
+.stats-icon{
+  display: inline-block;
+  font-size: 22px;
+  color: #5865f2;
+  margin-bottom: 10px;
+}
+
+/* ===== Crimes Icons ===== */
+.crime-meta{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 6px 0 0;
+}
+
+.crime-meta p{
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+}
+
+.crime-info .description{
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.crime-info .description i{
+  color: #5865f2;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.crime-meta i{
+  color: #5865f2;
+  font-size: 13px;
+}
+
+/* Button icon */
+.crime-card .button{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* Mobile */
+@media (max-width: 900px){
+  .stats{
+    grid-template-columns: 1fr;
+    padding: 50px 18px 30px;
+  }
+}
+
+
+/* ===== CRIMES ===== */
+.crime-section{
+  padding: 60px 18px 90px;
+  text-align: center;
+}
+
+.crime-section h2{
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 36px;
+}
+
+.crimes{
+  max-width: 1150px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+/* Crime Card */
+.crime-card{
+  background: linear-gradient(180deg, #1b1f26, #14171c);
+  border-radius: 10px;
+  padding: 22px;
+  text-align: right;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.crime-info h4{
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.crime-info .location,
+.crime-info .date{
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  margin: 3px 0;
+}
+
+.crime-info .description{
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Crime Button */
+.crime-card .button{
+  margin-top: 18px;
+  align-self: flex-start;
+
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.crime-card .button:hover{
+  border-color: #5865f2;
+  color: #5865f2;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px){
+  .stats{
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+
+  .crimes{
+    grid-template-columns: 1fr;
+  }
+
+  .intro h1{
+    font-size: 28px;
+  }
+}
+/* =========================
+   Responsive (reliable)
+   Phones -> 1 col
+   Small tablets -> 2 cols
+   Tablets+ -> 3 cols
+========================= */
+
+/* Default (desktop): 3 columns already set in .stats and .crimes */
+
+/* <= 1024px (tablets / small laptops) */
+@media (max-width: 1024px){
+  .stats{
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+  }
+
+  .crimes{
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+  }
+}
+
+/* <= 640px (phones) */
+@media (max-width: 640px){
+  .intro{
+    padding: 90px 14px 60px;
+  }
+
+  .intro h1{
+    font-size: 26px;
+  }
+
+  .intro p{
+    font-size: 14px;
+  }
+
+  .intro_button{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn{
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .stats{
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 50px 14px 25px;
+  }
+
+  .crimes{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .crime-section{
+    padding: 40px 14px 70px;
+  }
+}
+
+/* <= 360px (very small phones) */
+@media (max-width: 360px){
+  .intro h1{
+    font-size: 22px;
+  }
+
+  .stats-card h3{
+    font-size: 22px;
+  }
+}
+/* =========================
+   INTRO NEWS (ONE BY ONE)
+========================= */
+
+.intro .ticker-item {
+  display: inline-block;
+
+  max-width: 820px;
+  margin: 20px auto 0;
+  padding: 12px 18px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border-right: 3px solid #5865f2;
+  border-radius: 6px;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+
+  text-align: right;
+}
+
+/* dot */
+.intro .ticker-item::before {
+  content: "• ";
+  color: #5865f2;
+  font-weight: 900;
+}
+
+/* =========================
+   ANIMATION (CLEAN & CALM)
+========================= */
+
+.intro .ticker-item.animate {
+  animation: newsFadeSlide 0.6s ease-out;
+}
+
+@keyframes newsFadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 640px) {
+  .intro .ticker-item {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .intro .ticker-item {
+    font-size: 12px;
+  }
+}

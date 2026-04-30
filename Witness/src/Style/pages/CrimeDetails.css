@@ -1,0 +1,253 @@
+/* =========================
+   CrimeDetails.css (cd-*)
+   Target: match screenshot exactly
+   ========================= */
+.cd-page {
+  width: 100%;
+  
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  direction: rtl;
+  font-family: "Tajawal", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+/* Page */
+.cd-page {
+  background: #000;
+  color: #fff;
+}
+
+/* Center container */
+.cd-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Wrapper (no big outer frame) */
+.cd-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Title */
+.cd-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 900;
+  margin: 8px 0 18px;
+  letter-spacing: 0.2px;
+}
+
+/* =========================
+   Info bar (ONE strip)
+   ========================= */
+.cd-info-bar {
+  background: #1c222b;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 18px 22px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+/* each item */
+.cd-info-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  align-content: start;
+}
+
+.cd-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.cd-value {
+  font-size: 14px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.cd-state {
+  color: #6bff9a;
+}
+
+/* =========================
+   Cards (Details + Images)
+   ========================= */
+.cd-details-card,
+.cd-images-card {
+  margin-top: 18px;
+  background: #222831;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 18px 18px 20px;
+}
+
+/* Section titles (right aligned like screenshot) */
+.cd-section-title {
+  margin: 0 0 12px;
+  font-size: 15px;
+  font-weight: 900;
+  color: #fff;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* thin line under title (like screenshot) */
+.cd-section-title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+}
+
+/* Details text */
+.cd-details-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.95;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* =========================
+   Images grid (3 thumbnails)
+   ========================= */
+.cd-images-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.cd-img-box {
+  height: 250px; /* matches screenshot proportion */
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0f141b;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cd-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Back button (simple, unobtrusive) */
+.cd-back-btn {
+  margin: 18px auto 0;
+  display: block;
+  width: 190px;
+  padding: 10px 0;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.cd-back-btn:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 992px) {
+  .cd-info-bar {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+  .cd-images-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+/* =========================
+   Mobile compact (smaller)
+========================= */
+@media (max-width: 560px) {
+  .cd-container {
+    padding: 0 10px;
+  }
+
+  .cd-title {
+    font-size: 18px;
+    margin: 6px 0 12px;
+    letter-spacing: 0;
+  }
+  .cd-info-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* ✅ 2 per row */
+    gap: 10px;
+  }
+
+  .cd-label {
+    font-size: 11px;
+  }
+
+  .cd-value {
+    font-size: 12px;
+  }
+
+  .cd-details-card,
+  .cd-images-card {
+    margin-top: 12px;
+    padding: 12px 12px 14px;
+    border-radius: 9px;
+  }
+
+  .cd-section-title {
+    font-size: 13px;
+    margin: 0 0 10px;
+    padding-bottom: 8px;
+  }
+
+  .cd-section-title::after {
+    width: 110px;
+    height: 2px;
+  }
+
+  .cd-details-text {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .cd-images-grid {
+    margin-top: 10px;
+    gap: 10px;
+    grid-template-columns: 1fr; /* one image per row */
+  }
+
+  .cd-img-box {
+    height: 160px;
+    border-radius: 9px;
+  }
+
+  .cd-back-btn {
+    width: 160px;
+    padding: 9px 0;
+    border-radius: 9px;
+    font-size: 12px;
+    margin: 12px auto 0;
+  }
+}
